@@ -51,7 +51,7 @@ if(!$suspect) :
             } else {
                 $val = 'Not selected';
             }    
-            //If an array, epand to a comma seperated string
+            //If an array, expand to a comma seperated string
             if (is_array($val)) {
                 $val = implode(', ', $val);
             }
