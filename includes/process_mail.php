@@ -14,13 +14,11 @@ function isSuspect($value, $pattern, &$suspect) {
         }
     }
 }
-
 isSuspect($_POST, $pattern, $suspect);
 
 if(!$suspect) :
     foreach ($_POST as $key => $value) {
         $value = is_array($value) ? $value : trim($value); //if the post array values are an array
-        //$value = trim($value);
         //if the value is an empty string and is in the $required array
         if(empty($value) && in_array($key, $required)) {
             //echo "within required check conditional: " . $key . "<br/>";
